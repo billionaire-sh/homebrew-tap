@@ -4,11 +4,11 @@
 # This is a TEMPLATE. The five `__…__` tokens below are substituted by
 # `apps/billionaire/cli/scripts/release.sh` on every release:
 #
-#   1.0.0              ← `version` field of apps/billionaire/cli/package.json
-#   59be82dd8a8ddd3d52e37172e9d3b88570ee416b639c84f9f6ba376085a15853     ← sha256 of billionaire-darwin-arm64.tar.gz
-#   92aa14b75f334f7f424a67ba5b6ef4628b9f2d05abb584ec6559827c46a02928       ← sha256 of billionaire-darwin-x64.tar.gz
-#   3e8287a66292614e6556f550718662da2ba5aa41de64b4ef2dbeae49b08cd13b      ← sha256 of billionaire-linux-arm64.tar.gz
-#   0b22d744a04724d7cd98e7fefc4f4a7e884f30f10acc4be48c71de2351f33214        ← sha256 of billionaire-linux-x64.tar.gz
+#   1.1.0              ← `version` field of apps/billionaire/cli/package.json
+#   c92fa1922b9fb3d33cf3d438f5f07e9a2e3a9a40eea4a22d2d1536018939c927     ← sha256 of billionaire-darwin-arm64.tar.gz
+#   92e077df32d4e8ee306726efcbceffc41722a4a01532392c2e22aab657978239       ← sha256 of billionaire-darwin-x64.tar.gz
+#   533c910db1513052efb59f4a63322421dd8218ebad7ca9bcc5a5250f405a6369      ← sha256 of billionaire-linux-arm64.tar.gz
+#   a7ed04ee704b09dcbaa40b895de6b96c4e3e922a314357f38d108908c8f0f83e        ← sha256 of billionaire-linux-x64.tar.gz
 #
 # The substituted file is committed to `github.com/billionaire-sh/homebrew-tap`.
 # Hand-edits to this template are overwritten on every release; the
@@ -16,28 +16,28 @@
 class Billionaire < Formula
   desc "Agent-friendly command-line interface for the billionaire platform"
   homepage "https://github.com/billionaire-sh/cli"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/billionaire-sh/cli/releases/download/v#{version}/billionaire-darwin-arm64.tar.gz"
-      sha256 "59be82dd8a8ddd3d52e37172e9d3b88570ee416b639c84f9f6ba376085a15853"
+      sha256 "c92fa1922b9fb3d33cf3d438f5f07e9a2e3a9a40eea4a22d2d1536018939c927"
     end
     on_intel do
       url "https://github.com/billionaire-sh/cli/releases/download/v#{version}/billionaire-darwin-x64.tar.gz"
-      sha256 "92aa14b75f334f7f424a67ba5b6ef4628b9f2d05abb584ec6559827c46a02928"
+      sha256 "92e077df32d4e8ee306726efcbceffc41722a4a01532392c2e22aab657978239"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/billionaire-sh/cli/releases/download/v#{version}/billionaire-linux-arm64.tar.gz"
-      sha256 "3e8287a66292614e6556f550718662da2ba5aa41de64b4ef2dbeae49b08cd13b"
+      sha256 "533c910db1513052efb59f4a63322421dd8218ebad7ca9bcc5a5250f405a6369"
     end
     on_intel do
       url "https://github.com/billionaire-sh/cli/releases/download/v#{version}/billionaire-linux-x64.tar.gz"
-      sha256 "0b22d744a04724d7cd98e7fefc4f4a7e884f30f10acc4be48c71de2351f33214"
+      sha256 "a7ed04ee704b09dcbaa40b895de6b96c4e3e922a314357f38d108908c8f0f83e"
     end
   end
 
